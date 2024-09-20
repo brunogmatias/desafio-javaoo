@@ -50,7 +50,7 @@ public class GerenciadorPessoas {
         }
         return null;
     }
-    
+    //remove da array os códigos informados.
     public void removerPessoaCodigo(int codigo){
         for(int i = 0 ; i<= contador ; i++){
             if(pessoasLista[i].getCodigo()==codigo){
