@@ -54,13 +54,12 @@ public class GerenciadorPessoas {
     //remove da array os códigos informados
     public void removerPessoaCodigo(int codigo){
         for(int i = 0 ; i<= contador ; i++){
-            if(pessoasLista[i].getCodigo()==codigo && pessoasLista[i] != null){
+            if(pessoasLista[i] != null && pessoasLista[i].getCodigo()==codigo){
                 contador--;
                 pessoasLista[i] = null;
-                System.out.println("Pessoa removida com sucesso.");      
-            }else if(pessoasLista[i].getCodigo() != codigo && pessoasLista[i] == null){
-                System.out.println("Código informado não existe.");
+                System.out.println("Pessoa removida com sucesso.");                     
             }
         }
+        System.out.println("Código informado não existe.");
     }
 }
