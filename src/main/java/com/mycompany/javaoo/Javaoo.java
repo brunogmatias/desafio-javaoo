@@ -22,7 +22,23 @@ public class Javaoo {
         GerenciadorPessoas gerenciador = new GerenciadorPessoas();
         int op = 0;
         
-        while(op != 5){           
+        while(op != 5){
+            
+            System.out.println("--Controle de Funcionários--");
+            System.out.println("Digite a opção que deseja acesssar: ");
+            
+            System.out.println("1: Listar funcionários cadastrados.");
+            
+            System.out.println("2: Cadastrar novo funcionário.");
+            
+            System.out.println("3: Localizar funcionário por código.");
+            
+            System.out.println("4: Remover funcionário.");
+            
+            System.out.println("5: fechar programa.");
+            op = entrada.nextInt();
+            entrada.nextLine();
+            
             switch(op){
                  case 1:
                      System.out.println("Pessoas cadastradas: ");
@@ -32,10 +48,14 @@ public class Javaoo {
                  case 2:
                     System.out.println("Digite o nome da pessoa: ");
                     String nome = entrada.nextLine();
+                   
+                    
                     System.out.println("Digite a função da pessoa: ");
                     String funcao = entrada.nextLine();
+                    
                     System.out.println("Digite o código da pessoa: ");
                     int codigo = entrada.nextInt();
+                    entrada.nextLine();
                     
                     gerenciador.cadastrarPessoas(nome, funcao, codigo);
                 break;
@@ -51,8 +71,11 @@ public class Javaoo {
                      System.out.println("Digite o código da pessoa que você quer remover: ");
                      int codR = entrada.nextInt();
                      
-                     
+                     gerenciador.removerPessoaCodigo(codR);
                  break;
+                 
+                 default:
+                  System.out.println("Opção invalida."); 
             }      
         }
     }
