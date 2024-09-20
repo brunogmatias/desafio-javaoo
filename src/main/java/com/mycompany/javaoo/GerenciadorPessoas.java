@@ -55,6 +55,7 @@ public class GerenciadorPessoas {
         for(int i = 0 ; i<= contador ; i++){
             if(pessoasLista[i].getCodigo()==codigo){
                 pessoasLista[i] = null;
+                System.out.println("Pessoa removida com sucesso.");
             }else{
                 System.out.println("Código informado não existe.");
             }
