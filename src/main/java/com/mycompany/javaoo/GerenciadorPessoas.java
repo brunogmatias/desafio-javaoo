@@ -38,28 +38,29 @@ public class GerenciadorPessoas {
             if(pessoasLista[i] != null){
             System.out.println(pessoasLista[i]);
             }
-        }    
+        }
+        System.out.println("Nenhuma pessoa cadastrada.");
     }
     
     public Pessoa localizarPessoaCodigo(int codigo){
-        for(int i = 0 ; i < contador ; i++){
-            if(pessoasLista[i].getCodigo() == codigo && pessoasLista[i] != null){
+        for(int i = 0 ; i < contador ; i++){  
+            if(pessoasLista[i] != null && pessoasLista[i].getCodigo() == codigo){
                 System.out.println(pessoasLista[i]);
                 return pessoasLista[i]; //verificar se há alguém cadastrado através do contador, caso o código seja igual, retorna as informações da pessoa cadastrada.
             }
         }
+        System.out.println("Não há pessoa cadastrada com esse código.");
         return null;
     }
     //remove da array os códigos informados
     public void removerPessoaCodigo(int codigo){
         for(int i = 0 ; i<= contador ; i++){
-            if(pessoasLista[i].getCodigo()==codigo && pessoasLista[i] != null){
+            if(pessoasLista[i] != null && pessoasLista[i].getCodigo()==codigo){
                 contador--;
                 pessoasLista[i] = null;
-                System.out.println("Pessoa removida com sucesso.");      
-            }else{
-                System.out.println("Código informado não existe.");
+                System.out.println("Pessoa removida com sucesso.");                     
             }
         }
+        System.out.println("Código informado não existe.");
     }
 }
