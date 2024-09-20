@@ -57,7 +57,7 @@ public class GerenciadorPessoas {
                 contador--;
                 pessoasLista[i] = null;
                 System.out.println("Pessoa removida com sucesso.");      
-            }else{
+            }else if(pessoasLista[i].getCodigo() != codigo && pessoasLista[i] == null){
                 System.out.println("Código informado não existe.");
             }
         }
