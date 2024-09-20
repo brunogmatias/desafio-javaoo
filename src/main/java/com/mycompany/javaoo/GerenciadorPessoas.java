@@ -38,7 +38,8 @@ public class GerenciadorPessoas {
             if(pessoasLista[i] != null){
             System.out.println(pessoasLista[i]);
             }
-        }    
+        }
+        System.out.println("Nenhuma pessoa cadastrada.");
     }
     
     public Pessoa localizarPessoaCodigo(int codigo){
