@@ -56,7 +56,7 @@ public class GerenciadorPessoas {
             if(pessoasLista[i].getCodigo()==codigo){
                 pessoasLista[i] = null;
             }else{
-                System.out.println("Código informado não ");
+                System.out.println("Código informado não existe.");
             }
         }
     }
