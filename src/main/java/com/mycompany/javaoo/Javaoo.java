@@ -75,8 +75,11 @@ public class Javaoo {
                  break;
                  
                  default:
-                  System.out.println("Opção invalida."); 
+                  if(op != 5){
+                        System.out.println("Opção inválida.");
+                          } 
             }      
         }
+        System.out.println("Programa finalizado. Até logo!");
     }
 }
