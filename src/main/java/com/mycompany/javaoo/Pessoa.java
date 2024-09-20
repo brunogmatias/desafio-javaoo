@@ -9,7 +9,7 @@ package com.mycompany.javaoo;
  * @author bruno
  */
 
-//salvando em outro branch
+//salvando em outro branch.
 public class Pessoa {
     String nome;
     String funcao;
