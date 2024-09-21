@@ -34,14 +34,16 @@ public class GerenciadorPessoas {
     }
     
     public void listarPessoas(){
+        boolean temPessoa = false;
         for(int i = 0 ; i < contador ; i++){
             if(pessoasLista[i] != null){
                 System.out.println(pessoasLista[i]);
-            }else if(pessoasLista[i] == null){
+                temPessoa = true;
+            }           
+        }    
+        if(temPessoa != true){
                 System.out.println("Nenhuma pessoa cadastrada");
             }
-        }
-        
     }
     
     public Pessoa localizarPessoaCodigo(int codigo){
