@@ -39,6 +39,7 @@ public class GerenciadorPessoas {
             if(pessoasLista[i] != null){
                 System.out.println(pessoasLista[i]);
                 temPessoa = true;
+                break;
             }           
         }    
         if(temPessoa != true){
