@@ -34,16 +34,18 @@ public class GerenciadorPessoas {
     }
     
     public void listarPessoas(){
-        for(int i = 0 ; i <= contador ; i++){
+        for(int i = 0 ; i < contador ; i++){
             if(pessoasLista[i] != null){
-            System.out.println(pessoasLista[i]);
+                System.out.println(pessoasLista[i]);
+            }else if(pessoasLista[i] == null){
+                System.out.println("Nenhuma pessoa cadastrada");
             }
         }
-        System.out.println("Nenhuma pessoa cadastrada.");
+        
     }
     
     public Pessoa localizarPessoaCodigo(int codigo){
-        for(int i = 0 ; i < contador ; i++){  
+        for(int i = 0 ; i <= contador ; i++){  
             if(pessoasLista[i] != null && pessoasLista[i].getCodigo() == codigo){
                 System.out.println(pessoasLista[i]);
                 return pessoasLista[i]; //verificar se há alguém cadastrado através do contador, caso o código seja igual, retorna as informações da pessoa cadastrada.
